@@ -1,0 +1,43 @@
+---
+title: "SDS 192: Problem Set 7"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+```
+
+#### GitHub Documents
+
+This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
+
+## Here is some Code
+
+You can include R code in the document as follows:
+
+```{r cars}
+glimpse(cars)
+
+summary(cars)
+```
+
+------------
+
+## Visualizations Go Here
+
+You can also embed plots.   
+      
+**For example:**
+
+```{r pressure, echo = FALSE}
+ggplot(data = pressure, aes(x = temperature, y = pressure)) + geom_point() + geom_smooth(se = FALSE) + labs(title = "This is the same plot using ggplot")
+```
+
+```{r, echo = FALSE, message = FALSE}
+ggplot(cars, aes(x = speed, y = dist)) + geom_point() + labs(x = "Speed (mph)", y = "Stopping Distance (ft)", title = "Speed vs. Stopping Distance for 1920s Cars") + geom_smooth(method = "lm", se = FALSE)
+```
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
